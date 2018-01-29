@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="615.0" prefWidth="977.0" style="-fx-background-color: #485249;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="monopoly.GameController">
+   <children>
+      <ImageView fitHeight="615.0" fitWidth="615.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@monopolybord.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="buy" blendMode="HARD_LIGHT" layoutX="680.0" layoutY="440.0" mnemonicParsing="false" onAction="#buyAction" prefHeight="40.0" prefWidth="123.0" style="-fx-background-radius: 8;" text="Buy">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="sell" blendMode="HARD_LIGHT" layoutX="803.0" layoutY="440.0" mnemonicParsing="false" onAction="#sellAction" prefHeight="40.0" prefWidth="123.0" style="-fx-background-radius: 8;" text="Sell">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="chance" blendMode="HARD_LIGHT" layoutX="680.0" layoutY="520.0" mnemonicParsing="false" onAction="#chanceAction" prefHeight="40.0" prefWidth="246.0" style="-fx-background-radius: 8;" text="Take A Chance">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="exit" blendMode="HARD_LIGHT" layoutX="680.0" layoutY="560.0" mnemonicParsing="false" onAction="#exitAction" prefHeight="40.0" prefWidth="246.0" style="-fx-background-radius: 8;" text="Exit">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="dice" blendMode="HARD_LIGHT" layoutX="680.0" layoutY="362.0" mnemonicParsing="false" onAction="#diceAction" prefHeight="40.0" prefWidth="246.0" style="-fx-background-radius: 8;" text="Roll The Dice" textFill="#17043bf0">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <Label fx:id="player1" layoutX="681.0" layoutY="54.0" prefHeight="30.0" prefWidth="296.0" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="money1" layoutX="681.0" layoutY="84.0" prefHeight="30.0" prefWidth="296.0" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="money2" layoutX="681.0" layoutY="170.0" prefHeight="30.0" prefWidth="296.0" style="-fx-background-radius: 8;" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="player2" layoutX="680.0" layoutY="140.0" prefHeight="30.0" prefWidth="296.0" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="player3" layoutX="680.0" layoutY="222.0" prefHeight="30.0" prefWidth="296.0" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="money3" layoutX="681.0" layoutY="252.0" prefHeight="30.0" prefWidth="296.0" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="notice" alignment="CENTER" layoutX="110.0" layoutY="260.0" prefHeight="96.0" prefWidth="396.0" text="Notifications" textFill="WHITE">
+         <font>
+            <Font name="Calibri Bold" size="24.0" />
+         </font>
+      </Label>
+      <Circle fx:id="purple" layoutX="558.0" layoutY="600.0" opacity="0.85" radius="12.0" stroke="BLACK" strokeType="INSIDE">
+         <fill>
+            <RadialGradient centerX="0.5222222222222223" centerY="0.49047619047619045" radius="0.5">
+               <stops>
+                  <Stop color="MAGENTA" />
+                  <Stop color="BLACK" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </fill></Circle>
+      <Button fx:id="move" blendMode="HARD_LIGHT" layoutX="680.0" layoutY="401.0" mnemonicParsing="false" onAction="#makeMove" prefHeight="40.0" prefWidth="123.0" style="-fx-background-radius: 8;" text="Move">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="chest" blendMode="HARD_LIGHT" layoutX="680.0" layoutY="480.0" mnemonicParsing="false" onAction="#openChest" prefHeight="40.0" prefWidth="246.0" style="-fx-background-radius: 8;" text="Community Chest">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <Circle fx:id="blue" layoutX="558.0" layoutY="600.0" opacity="0.85" radius="12.0" stroke="BLACK" strokeType="INSIDE">
+         <fill>
+            <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+               <stops>
+                  <Stop color="BLACK" />
+                  <Stop color="#00b6ff" offset="0.007662835249042145" />
+                  <Stop color="BLACK" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </fill>
+      </Circle>
+      <Circle fx:id="red" layoutX="558.0" layoutY="600.0" opacity="0.85" radius="12.0" stroke="BLACK" strokeType="INSIDE">
+         <fill>
+            <RadialGradient centerX="0.5222222222222223" centerY="0.49047619047619045" radius="0.5">
+               <stops>
+                  <Stop color="RED" />
+                  <Stop color="BLACK" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </fill>
+      </Circle>
+      <Button fx:id="end" blendMode="HARD_LIGHT" layoutX="803.0" layoutY="401.0" mnemonicParsing="false" onAction="#endMove" prefHeight="40.0" prefWidth="123.0" style="-fx-background-radius: 8;" text="End Move">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <ImageView fx:id="diceImage2" fitHeight="67.0" fitWidth="83.0" layoutX="315.0" layoutY="95.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="diceImage1" fitHeight="67.0" fitWidth="83.0" layoutX="233.0" layoutY="95.0" pickOnBounds="true" preserveRatio="true" />
+   </children>
+</AnchorPane>
